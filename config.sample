@@ -12,6 +12,12 @@ config = {
     'tag_name': 'MakeSnapshot',
     'tag_value': 'True',
 
+    # tag_type 'volume' will cause individual volumes that match the above tag
+    # to be snapshotted.
+    # tag_type 'instance' will cause volumes attached to running instances that
+    # match the above tag to be snapshotted.
+    'tag_type': 'volume',
+
     # Number of snapshots to keep (the older ones are going to be deleted,
     # since they cost money).
     'keep_day': 5,
